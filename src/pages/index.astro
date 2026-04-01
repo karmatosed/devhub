@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SiteHeader from '../components/nav/SiteHeader.astro';
+import Hero from '../components/hero/Hero.astro';
+import Pillars from '../components/sections/Pillars.astro';
+import Spotlight from '../components/sections/Spotlight.astro';
+import ChangelogTeaser from '../components/sections/ChangelogTeaser.astro';
+import ResourcesRoadmap from '../components/sections/ResourcesRoadmap.astro';
+import SiteFooter from '../components/footer/SiteFooter.astro';
+---
+
+<Layout>
+	<SiteHeader />
+	<main id="main">
+		<Hero />
+		<Pillars />
+		<Spotlight />
+		<ChangelogTeaser />
+		<ResourcesRoadmap />
+	</main>
+	<SiteFooter />
+</Layout>
+
+<script>
+	import { initSectionReveals } from '../scripts/section-reveals';
+
+	initSectionReveals();
+</script>

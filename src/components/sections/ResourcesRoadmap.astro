@@ -1,0 +1,25 @@
+---
+import { siteLinks } from '../../config/site-links';
+---
+
+<section class="section" id="resources" data-reveal aria-labelledby="resources-title">
+	<div class="section__inner">
+		<h2 id="resources-title" class="section__title">Resources</h2>
+		<p class="section__lead">
+			Planned destinations—swap these links in one config file as pages go live.
+		</p>
+		<div class="roadmap-grid">
+			{siteLinks.roadmap.map((item) => (
+				<div class="roadmap-card">
+					<span class="mono" style="color: var(--color-turquoise); font-size: 0.75rem">
+						Upcoming
+					</span>
+					<strong>{item.label}</strong>
+					<a class="btn btn--secondary" href={item.href} style="margin-top: auto">
+						Open
+					</a>
+				</div>
+			))}
+		</div>
+	</div>
+</section>

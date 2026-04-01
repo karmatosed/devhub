@@ -1,0 +1,16 @@
+---
+import { siteLinks } from '../../config/site-links';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+	<div class="site-footer__inner">
+		<p>© {year} Convesio. All rights reserved.</p>
+		<div class="site-footer__legal">
+			{siteLinks.footer.legal.map((item) => (
+				<a href={item.href}>{item.label}</a>
+			))}
+		</div>
+	</div>
+</footer>

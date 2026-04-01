@@ -1,0 +1,26 @@
+{
+  "name": "convesio-devdocs",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test": "vitest run",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@fontsource-variable/dm-sans": "^5.2.8",
+    "@fontsource-variable/jetbrains-mono": "^5.2.8",
+    "astro": "^6.1.1",
+    "gsap": "^3.14.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.8",
+    "vitest": "^4.1.2"
+  }
+}

@@ -1,0 +1,48 @@
+---
+import '@fontsource-variable/dm-sans';
+import '@fontsource-variable/jetbrains-mono';
+import '../styles/global.css';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const {
+	title = 'Convesio — Developer resources',
+	description = 'Hosting, MCPs, APIs, and payments for technical teams building on Convesio.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content={description} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta name="theme-color" content="#121110" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+		<script is:inline>
+			(function () {
+				try {
+					var k = 'convesio-dev-theme';
+					var v = localStorage.getItem(k);
+					var root = document.documentElement;
+					root.classList.remove('light', 'dark');
+					if (v === 'light') root.classList.add('light');
+					else root.classList.add('dark');
+				} catch (e) {
+					document.documentElement.classList.add('dark');
+				}
+			})();
+		</script>
+	</head>
+	<body>
+		<a class="skip-link" href="#main">Skip to content</a>
+		<slot />
+	</body>
+</html>

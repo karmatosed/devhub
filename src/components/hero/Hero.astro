@@ -1,0 +1,39 @@
+---
+import HeroSidePanel from './HeroSidePanel.astro';
+import { siteLinks } from '../../config/site-links';
+
+const { heroPrimary, heroSecondary } = siteLinks.ctas;
+---
+
+<section class="hero" aria-labelledby="hero-title">
+	<div class="hero__canvas-wrap" aria-hidden="true">
+		<canvas id="hero-canvas" width="1200" height="800"></canvas>
+	</div>
+	<div class="hero__glow" aria-hidden="true"></div>
+	<div class="hero__scrim" aria-hidden="true"></div>
+	<div class="hero__main">
+		<div class="hero__layout">
+			<div class="hero__inner">
+				<p class="hero__eyebrow">Developer platform</p>
+				<h1 id="hero-title" class="hero__title">Infrastructure and payments, built for technical teams</h1>
+				<p class="hero__sub">
+					Explore MCP integrations, APIs, and hosting tools—one place to discover how to connect and ship on
+					Convesio.
+				</p>
+				<div class="hero__ctas">
+					<a class="btn btn--primary" href={heroPrimary.href}>{heroPrimary.label}</a>
+					<a class="btn btn--secondary" href={heroSecondary.href}>{heroSecondary.label}</a>
+				</div>
+			</div>
+			<HeroSidePanel />
+		</div>
+	</div>
+</section>
+
+<script>
+	import { initHeroAtmosphere } from './hero-atmosphere';
+	import { initHeroIntro } from '../../scripts/hero-intro';
+
+	initHeroAtmosphere();
+	initHeroIntro();
+</script>
