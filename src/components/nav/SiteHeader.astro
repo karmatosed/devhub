@@ -7,7 +7,12 @@ import { siteLinks } from '../../config/site-links';
 	<a class="site-header__brand" href="/">Convesio Developers</a>
 	<nav class="site-header__nav" aria-label="Primary">
 		{siteLinks.nav.map((item) => (
-			<a href={item.href}>{item.label}</a>
+			<a
+				href={item.href}
+				{...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+			>
+				{item.label}
+			</a>
 		))}
 	</nav>
 	<div class="site-header__actions">

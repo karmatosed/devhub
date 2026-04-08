@@ -2,18 +2,24 @@ export type NavItem = { label: string; href: string; external?: boolean };
 
 export const siteLinks = {
 	nav: [
-		{ label: 'Docs', href: '#resources' },
-		{ label: 'API', href: '#resources' },
-		{ label: 'MCP', href: '#spotlight-hosting' },
+		{ label: 'APIs', href: '#featured-apis' },
 		{ label: 'Changelog', href: '#changelog' },
 	] as NavItem[],
 	ctas: {
-		heroPrimary: { label: 'Explore MCP', href: '#spotlight-hosting' },
-		heroSecondary: { label: 'Payments & APIs', href: '#spotlight-pay' },
+		heroPrimary: { label: 'Explore APIs', href: '#featured-apis' },
+		heroSecondary: { label: 'Changelog', href: '#changelog' },
 	},
 	spotlight: {
-		convesioPay: { label: 'ConvesioPay', href: '#' },
-		hostingMcp: { label: 'Hosting MCP', href: '#' },
+		convesioPay: {
+			label: 'Documentation',
+			href: 'https://docs.convesiopay.com/',
+			external: true,
+		},
+		convert: {
+			label: 'Documentation',
+			href: 'https://developers.convert.convesio.com/',
+			external: true,
+		},
 	},
 	changelog: { label: 'Full changelog', href: '#' },
 	roadmap: [
@@ -24,8 +30,16 @@ export const siteLinks = {
 	] as NavItem[],
 	footer: {
 		legal: [
-			{ label: 'Privacy', href: '#' },
-			{ label: 'Terms', href: '#' },
+			{
+				label: 'Privacy',
+				href: 'https://convesio.com/privacy-policy/',
+				external: true,
+			},
+			{
+				label: 'Terms',
+				href: 'https://convesio.com/terms-of-service/',
+				external: true,
+			},
 		] as NavItem[],
 	},
 };

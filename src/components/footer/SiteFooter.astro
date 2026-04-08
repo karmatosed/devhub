@@ -9,7 +9,12 @@ const year = new Date().getFullYear();
 		<p>© {year} Convesio. All rights reserved.</p>
 		<div class="site-footer__legal">
 			{siteLinks.footer.legal.map((item) => (
-				<a href={item.href}>{item.label}</a>
+				<a
+					href={item.href}
+					{...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+				>
+					{item.label}
+				</a>
 			))}
 		</div>
 	</div>

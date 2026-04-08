@@ -2,30 +2,43 @@
 import { siteLinks } from '../../config/site-links';
 ---
 
-<section class="section" data-reveal aria-labelledby="spotlight-title">
+<section class="section" id="featured-apis" data-reveal aria-labelledby="spotlight-title">
 	<div class="section__inner">
-		<h2 id="spotlight-title" class="section__title">Featured</h2>
-		<p class="section__lead">Payments and hosting tooling—two entry points teams reach for first.</p>
+		<h2 id="spotlight-title" class="section__title">Featured APIs</h2>
+		<!--
+		<p class="section__lead">
+			A nice description goes here.
+		</p>
+		-->
 		<div class="spotlight-grid">
 			<article class="spotlight spotlight--coral" id="spotlight-pay">
-				<p class="card__label" style="color: var(--color-coral)">Payments</p>
 				<h3 class="card__title">ConvesioPay</h3>
 				<p class="card__text">
 					Enterprise-grade payments with developer-friendly flows—designed to pair with your commerce stack on
 					Convesio.
 				</p>
-				<a class="btn btn--primary" href={siteLinks.spotlight.convesioPay.href}>
+				<a
+					class="btn btn--primary"
+					href={siteLinks.spotlight.convesioPay.href}
+					{...(siteLinks.spotlight.convesioPay.external
+						? { target: '_blank', rel: 'noopener noreferrer' }
+						: {})}
+				>
 					{siteLinks.spotlight.convesioPay.label}
 				</a>
 			</article>
-			<article class="spotlight spotlight--turquoise" id="spotlight-hosting">
-				<p class="card__label">MCP</p>
-				<h3 class="card__title">Hosting MCP</h3>
+			<article class="spotlight spotlight--turquoise" id="spotlight-convert">
+				<h3 class="card__title">ConvesioConvert</h3>
 				<p class="card__text">
-					Operate and observe hosting workflows through MCP—built for agents, platforms, and power users.
+					Omni-channel marketing automation for WooCommerce and Shopify in your commerce stack.
+					 
 				</p>
-				<a class="btn btn--secondary" href={siteLinks.spotlight.hostingMcp.href}>
-					{siteLinks.spotlight.hostingMcp.label}
+				<a
+					class="btn btn--secondary"
+					href={siteLinks.spotlight.convert.href}
+					{...(siteLinks.spotlight.convert.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+				>
+					{siteLinks.spotlight.convert.label}
 				</a>
 			</article>
 		</div>

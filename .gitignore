@@ -1,2 +1,18 @@
-# macOS
+# Dependencies
+node_modules/
+
+# Astro
+.astro/
+dist/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor
 .DS_Store
